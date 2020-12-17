@@ -50,6 +50,13 @@ public class MultipleChoice extends Question {
 
     @Override
     public String toString() {
-        return "The correct answer is" + correctAnswer + ".";
+        return this.getQuestion() +"\n"
+                + this.answer1 +"\n"
+                + this.answer2 + "\n"
+                + this.answer3 + "\n";
+    }
+
+    public String answerToString() {
+        return "The correct answer is " + this.correctAnswer + ".";
     }
 }

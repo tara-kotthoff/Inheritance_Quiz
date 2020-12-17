@@ -2,18 +2,29 @@ package Fun_Quiz;
 
 public class TrueFalse extends Question {
 
-    private int answer;
+    private boolean isTrue = false;
 
-    public TrueFalse(String question, int answer) {
+    public TrueFalse(String question, boolean isTrue) {
         super(question);
-        this.answer = answer;
+        this.isTrue = isTrue;
     }
 
-    public int getAnswer() {
-        return answer;
+    public boolean isTrue() {
+        return isTrue;
     }
 
-    public void setAnswer(int answer) {
-        this.answer = answer;
+    public void setTrue(boolean aTrue) {
+        isTrue = aTrue;
     }
+
+    @Override
+
+    public String toString(){
+        return this.getQuestion() +"\n";
+    }
+
+    public String answerToString() {
+        return "The correct answer is " + this.isTrue + " .";
+    }
+
 }

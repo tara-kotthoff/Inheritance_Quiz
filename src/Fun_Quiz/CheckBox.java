@@ -69,7 +69,18 @@ public class CheckBox extends Question {
     }
 
     @Override
+
     public String toString() {
-        return "The correct answers are " + correctAnswer1 + "and" + correctAnswer2 + ".";
+        return this.getQuestion() +"\n"
+                + this.answer1 +"\n"
+                + this.answer2 + "\n"
+                + this.answer3 + "\n"
+                + this.answer4 + "\n";
     }
+
+    public String answerToString() {
+        return "The correct answers are " + this.correctAnswer1 + " and" + this.correctAnswer2 + " .";
+    }
+
+
 }
