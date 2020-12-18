@@ -8,6 +8,7 @@ public class CheckBox extends Question {
     private String answer4;
     private int correctAnswer1;
     private int correctAnswer2;
+    private final double pointValue = 2;
 
     public CheckBox(String question, String answer1, String answer2, String answer3, String answer4,
                     int correctAnswer1, int correctAnswer2) {
@@ -18,6 +19,7 @@ public class CheckBox extends Question {
         this.answer4 = answer4;
         this.correctAnswer1 = correctAnswer1;
         this.correctAnswer2 = correctAnswer2;
+
     }
 
     public String getAnswer1() {
@@ -68,6 +70,10 @@ public class CheckBox extends Question {
         this.correctAnswer2 = correctAnswer2;
     }
 
+    public final double getPointValue() {
+        return this.pointValue;
+    }
+
     @Override
 
     public String toString() {
@@ -79,7 +85,7 @@ public class CheckBox extends Question {
     }
 
     public String answerToString() {
-        return "The correct answers are " + this.correctAnswer1 + " and" + this.correctAnswer2 + " .";
+        return "The correct answers are " + this.correctAnswer1 + " and " + this.correctAnswer2 + " .";
     }
 
 

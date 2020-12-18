@@ -7,6 +7,7 @@ public class MultipleChoice extends Question {
     private String answer2;
     private String answer3;
     private int correctAnswer;
+    private final double pointValue = 1;
 
     public MultipleChoice(String question, String answer1, String answer2, String answer3, int correctAnswer) {
         super(question);
@@ -47,6 +48,12 @@ public class MultipleChoice extends Question {
     public void setCorrectAnswer(int correctAnswer) {
         this.correctAnswer = correctAnswer;
     }
+
+    public final double getPointValue() {
+        return this.pointValue;
+    }
+
+
 
     @Override
     public String toString() {

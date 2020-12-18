@@ -43,19 +43,17 @@ public class QuizSheet {
         return this.quizSheet.get(i);
     }
 
-//    @Override
-//    public String toString() {
-//        return "QuizSheet{" +
-//                "quizSheet=" + quizSheet +
-//                '}';
-//    }
+    public int getSize() {
+        return quizSheet.size();
+    }
 
-//    public String toString() {
-//        for (item: quizSheet) {
-//            if(item == MultipleChoice) {
-//                System.out.println();
-//            }
-//
+
+
+//    public void calculateTotalPointsPossible() {
+//        double totalPointsPossible = 0;
+//        for (int i = 0; i < quizSheet.size(); i++) {
+//            totalPointsPossible += this.quizSheet.get(i).getPointValue();
 //        }
 //    }
+
 }
