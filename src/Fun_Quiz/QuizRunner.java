@@ -39,13 +39,15 @@ public class QuizRunner {
 
         double numCorrectAnswers = 0;
         double numWrongAnswers = 0;
+        double totalPointsPossible = 0;
 
         for (int i = 0; i < colorQuiz.size(); i++) {
             Scanner input;
             Scanner input2;
             System.out.println(colorQuiz.get(i));
-            
+
             if(colorQuiz.get(i) instanceof MultipleChoice) {
+                totalPointsPossible += 1;
                 int userAnswer;
                 input = new Scanner(System.in);
                 System.out.println("Please enter the corresponding number for the correct answer:");
@@ -57,27 +59,29 @@ public class QuizRunner {
                     System.out.println(((MultipleChoice) colorQuiz.get(i)).answerToString() + "\n\n\n");
                     numWrongAnswers += 1;
                 }
-                
+
             } else if(colorQuiz.get(i) instanceof CheckBox) {
+                totalPointsPossible += 1;
                 int userAnswer1;
                 int userAnswer2;
                 input = new Scanner(System.in);
                 input2 = new Scanner(System.in);
-                System.out.println("There are two correct answers. Please enter the corresponding number for the first" +
+                System.out.println("There are two correct answers. Please type the corresponding number for the first" +
                         " correct answer and hit enter, then enter the second corresponding number.");
                 userAnswer1 = input.nextInt();
                 userAnswer2 = input2.nextInt();
-                if (userAnswer1 == ((CheckBox) colorQuiz.get(i)).getCorrectAnswer1() || userAnswer1 ==
-                        ((CheckBox) colorQuiz.get(i)).getCorrectAnswer2()) {
+                if ((userAnswer1 == ((CheckBox) colorQuiz.get(i)).getCorrectAnswer1() || userAnswer1 ==
+                        ((CheckBox) colorQuiz.get(i)).getCorrectAnswer2()) && (userAnswer2 == ((CheckBox) colorQuiz.get(i)).getCorrectAnswer1() || userAnswer2 ==
+                        ((CheckBox) colorQuiz.get(i)).getCorrectAnswer2())) {
                     System.out.println("Correct!\n\n\n");
                     numCorrectAnswers += 1;
-                } else if (userAnswer2 == ((CheckBox) colorQuiz.get(i)).getCorrectAnswer1() || userAnswer2 ==
-                        ((CheckBox) colorQuiz.get(i)).getCorrectAnswer2()) {
+                } else {
                     System.out.println(((CheckBox) colorQuiz.get(i)).answerToString() + "\n\n\n");
                     numWrongAnswers += 1;
                 }
 
             } else if(colorQuiz.get(i) instanceof TrueFalse) {
+                totalPointsPossible += 1;
                 input = new Scanner(System.in);
                 System.out.println("Please enter 1 to indicate 'True' and 2 to indicate 'False'.");
                 int userAnswer = input.nextInt();
@@ -100,13 +104,8 @@ public class QuizRunner {
 
         }
 
-        double totalPointsPossible;
 
-        for (int i = 0; i < colorQuiz.size(); i++) {
-           colorQuiz.get(i).getPointValue();
-        }
-
-        double userGrade = numCorrectAnswers/colorQuiz.getSize();
+        double userGrade = numCorrectAnswers/totalPointsPossible;
         System.out.println("Your grade is " + userGrade + "%.");
 
 

@@ -7,7 +7,7 @@ public class MultipleChoice extends Question {
     private String answer2;
     private String answer3;
     private int correctAnswer;
-    private final double pointValue = 1;
+//    private double pointValue = 1;
 
     public MultipleChoice(String question, String answer1, String answer2, String answer3, int correctAnswer) {
         super(question);
@@ -49,9 +49,9 @@ public class MultipleChoice extends Question {
         this.correctAnswer = correctAnswer;
     }
 
-    public final double getPointValue() {
-        return this.pointValue;
-    }
+//    public double getPointValue() {
+//        return this.pointValue;
+//    }
 
 
 

@@ -2,6 +2,7 @@ package Fun_Quiz;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class QuizSheet {
 
@@ -46,14 +47,5 @@ public class QuizSheet {
     public int getSize() {
         return quizSheet.size();
     }
-
-
-
-//    public void calculateTotalPointsPossible() {
-//        double totalPointsPossible = 0;
-//        for (int i = 0; i < quizSheet.size(); i++) {
-//            totalPointsPossible += this.quizSheet.get(i).getPointValue();
-//        }
-//    }
 
 }
