@@ -8,7 +8,6 @@ public class CheckBox extends Question {
     private String answer4;
     private int correctAnswer1;
     private int correctAnswer2;
-//    private final double pointValue = 2;
 
     public CheckBox(String question, String answer1, String answer2, String answer3, String answer4,
                     int correctAnswer1, int correctAnswer2) {
