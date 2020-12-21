@@ -3,7 +3,6 @@ package Fun_Quiz;
 public class TrueFalse extends Question {
 
     private boolean isTrue;
-//    private final double pointValue = 1;
 
     public TrueFalse(String question, boolean isTrue) {
         super(question);
@@ -18,9 +17,6 @@ public class TrueFalse extends Question {
         isTrue = aTrue;
     }
 
-//    public final double getPointValue() {
-//        return this.pointValue;
-//    }
 
     @Override
 

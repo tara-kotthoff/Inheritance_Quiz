@@ -8,9 +8,6 @@ public class QuizSheet {
 
     private ArrayList<Object> quizSheet = new ArrayList<>();
 
-//    public QuizSheet(ArrayList<Object> quizSheet) {
-//        this.quizSheet = quizSheet;
-//    }
 
     public ArrayList<Object> getQuizSheet() {
         return quizSheet;

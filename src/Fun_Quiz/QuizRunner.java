@@ -96,8 +96,8 @@ public class QuizRunner {
 
             }
 
-
         }
+
 
         //TODO: Calculate grade and print to console
         double userGrade = numCorrectAnswers/totalPointsPossible;

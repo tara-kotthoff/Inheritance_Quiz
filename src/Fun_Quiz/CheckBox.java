@@ -69,9 +69,6 @@ public class CheckBox extends Question {
         this.correctAnswer2 = correctAnswer2;
     }
 
-//    public final double getPointValue() {
-//        return this.pointValue;
-//    }
 
     @Override
 
